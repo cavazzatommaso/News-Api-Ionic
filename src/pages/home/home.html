@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>News</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+    <ion-item padding-right>
+        <ion-label>Source:</ion-label>
+        <ion-select name="selected" [(ngModel)]="selectedSource" (ionChange)="loadData()">
+        <ion-option *ngFor="let item of source"  value="{{item.id}}">{{item.name}}</ion-option>
+        </ion-select>
+    </ion-item>
+  <ion-card >
+
+    <ion-list *ngFor="let x of articles">
+      <ion-item>
+        <ion-thumbnail item-start *ngIf="x.urlToImage">
+          <img src="{{x.urlToImage}}" alt="Errore" imageViewer>
+        </ion-thumbnail>
+        <p text-wrap>{{x.title}}</p>
+        <h1></h1>
+        <button ion-button item-end color="light" (click)="openModal(this.x)"><ion-icon name="arrow-dropright"></ion-icon></button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <button ion-button icon-left (click)="toggleAppTheme()">
+      <ion-icon  name="bulb"></ion-icon>Mode
+  </button>
+
+</ion-content>

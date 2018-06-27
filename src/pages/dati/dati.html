@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{articolo.source.name}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">X</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+      <img src="{{articolo.urlToImage}}" class="immagine" *ngIf="articolo.urlToImage" imageViewer />
+      <ion-card-content>
+      <h2>{{articolo.title}}</h2>
+       <p text-wrap>{{articolo.description}}</p>
+       <ion-item *ngIf="articolo.author">
+        Autore:
+         <ion-note item-end>
+           {{articolo.author}}
+         </ion-note>
+       </ion-item> 
+       <ion-item *ngIf="articolo.publishedAt">
+        Pubblicato il:
+         <ion-note item-end>
+           {{articolo.publishedAt}}
+         </ion-note>
+       </ion-item> 
+      </ion-card-content>
+  </ion-card>
+  <ion-buttons>
+    <button ion-button (click)="openBrowser()">Open In Browser</button>
+  </ion-buttons>
+</ion-content>

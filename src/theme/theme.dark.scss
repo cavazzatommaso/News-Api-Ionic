@@ -1,0 +1,24 @@
+.dark-theme {
+    ion-content, button, ion-item {
+      background-color: #090f2f;
+      color: #fff;
+    }
+
+    button{
+      border: 1px solid white;
+    }
+
+    .alertController{
+      background-color: #090f2f;
+      color: blue;
+    }
+
+    .toolbar-title {
+      color: #fff;
+    }
+   
+    .header .toolbar-background {
+      border-color: #ff0fff;
+      background-color: #090f2f;
+    }
+  }  
