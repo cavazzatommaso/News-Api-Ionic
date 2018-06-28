@@ -30,7 +30,7 @@ export class DatiPage {
   }
 
   openBrowser() {
-    this.iab.create(this.articolo.url,'_self',{location:'no'});
+    this.iab.create(this.articolo.url,'_system',{location:'no'});
   }
 
 }

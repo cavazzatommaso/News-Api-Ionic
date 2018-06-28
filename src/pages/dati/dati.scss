@@ -1,5 +1,14 @@
 page-dati {
     .immagine{
-        height: 200px;
+        max-height: 200px;
+    }
+
+    .articles{
+        border-radius: 25px;
+        width: 98%;
+    }
+
+    .body{
+        background-color: color($colors, light);
     }
 }

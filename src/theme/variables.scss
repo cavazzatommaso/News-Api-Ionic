@@ -35,13 +35,18 @@ $app-direction: ltr;
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
+
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  primary:    rgba(0, 75, 89, 1),
+  secondary:  rgba(28, 184, 188, 1),
+  danger:     rgba(255, 255, 255, 1),
+  light:      rgba(255, 210, 137, 1),
+  dark:       rgba(255, 224, 6, 1)
 );
+
+$toolbar-md-title-text-color: #fff;
+$toolbar-ios-title-text-color: #fff;
+$toolbar-wp-title-text-color: #fff;
 
 
 // App iOS Variables
