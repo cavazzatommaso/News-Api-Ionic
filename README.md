@@ -61,7 +61,7 @@ openModal(event){
     </ion-item>
  ```
     
-    Now we have finish the loading procedure and we have only to display the data in the other modal.
+Now we have finish the loading procedure and we have only to display the data in the other modal.
     
 ## How to use this?
 To make this work on your computer:
