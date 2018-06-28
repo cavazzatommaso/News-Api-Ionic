@@ -14,7 +14,7 @@ import { SettingsProvider } from './../../providers/settings/settings';
 export class HomePage {
 
   articles: any;
-  api: string = "1d1568c34a6647d8ab4885d0187746f0";
+  api: string = "";//INSERT YOU API HERE
   prova;
   source=[];
   selectedSource: String="ansa";
