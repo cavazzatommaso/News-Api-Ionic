@@ -10,8 +10,6 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SettingsProvider } from '../providers/settings/settings';
-import { WheelSelector } from '@ionic-native/wheel-selector';
-
 
 @NgModule({
   declarations: [
@@ -34,8 +32,7 @@ import { WheelSelector } from '@ionic-native/wheel-selector';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     InAppBrowser,
-    SettingsProvider,
-    WheelSelector
+    SettingsProvider
   ]
 })
 export class AppModule {}

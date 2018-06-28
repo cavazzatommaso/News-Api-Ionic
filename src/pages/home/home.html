@@ -7,15 +7,15 @@
 <ion-content class="body">
     <ion-item padding-right class="source" color="danger">
         <ion-label>Source:</ion-label>
-        <ion-select name="selected" [(ngModel)]="selectedSource" (ionChange)="loadData()">
+        <ion-select name="selected" [(ngModel)]="selectedSource" (ionChange)="loadData()" interface="action-sheet" submitText="Okay" cancelText="Nah">
         <ion-option *ngFor="let item of source"  value="{{item.id}}">{{item.name}}</ion-option>
         </ion-select>
     </ion-item>
   <ion-card class="articles" color="danger">
-    <ion-list *ngFor="let x of articles">
-      <ion-item>
+    <ion-list *ngFor="let x of articles; let i = index">
+      <ion-item class="elemento">
         <ion-thumbnail item-start *ngIf="x.urlToImage">
-          <img src="{{x.urlToImage}}"  class="thumb" alt="Errore" imageViewer>
+          <img src="{{x.urlToImage}}"  class='thumb' [class.first]="i == 0" [class.last]="i == articles.length-1" alt="Errore" imageViewer>
         </ion-thumbnail>
         <p text-wrap>{{x.title}}</p>
         <button ion-button item-end color="danger" (click)="openModal(this.x)"><ion-icon name="arrow-dropright" md="md-arrow-dropright-circle" color="primary"></ion-icon></button>
